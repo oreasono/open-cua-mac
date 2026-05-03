@@ -1,0 +1,31 @@
+{
+  "name": "open-cua-mac",
+  "version": "0.1.0",
+  "description": "Open-source Computer Use CLI for macOS — Anthropic computer_20250124 + Accessibility, runs end-to-end from your terminal.",
+  "type": "module",
+  "license": "MIT",
+  "repository": "github:oreasono/open-cua-mac",
+  "bin": {
+    "open-cua-mac": "./bin/cli.ts"
+  },
+  "files": [
+    "bin",
+    "src",
+    "swift-helper",
+    "scripts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build:ax": "swift build --package-path swift-helper -c release",
+    "start": "bun bin/cli.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.92.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  }
+}
